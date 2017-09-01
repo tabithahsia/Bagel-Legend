@@ -11,7 +11,9 @@ class App extends React.Component {
       <div>
         <h1>Bagel Legend</h1>
         <Search />
-        
+        <h2>Top Bagels of All Time</h2>
+        <h2>Most Popular Bagels of All Time</h2>
+
       </div>
     );
   }
