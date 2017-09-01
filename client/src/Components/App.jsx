@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Search from './Search.jsx';
+import Login from './Login.jsx';
+import Signup from './Signup.jsx';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -11,8 +14,17 @@ class App extends React.Component {
       <div>
         <h1>Bagel Legend</h1>
         <Search />
-        <h2>Top Bagels of All Time</h2>
-        <h2>Most Popular Bagels of All Time</h2>
+        <Login />
+        <Signup />
+
+        <div>
+          <h2>Top Bagels of All Time</h2>
+
+        </div>
+
+        <div>
+          <h2>Most Popular Bagels of All Time</h2>
+        </div>
 
       </div>
     );
