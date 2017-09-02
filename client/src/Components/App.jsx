@@ -9,21 +9,42 @@ class App extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-        showLogin: false
-      }
+        showLogin: false,
+        showSignup: false
+      };
+
+      this.showLogin = this.showLogin.bind(this);
+      this.showSignup = this.showSignup.bind(this);
     }
+
+    showLogin() {
+      this.setState({
+        showLogin: true,
+        showSignup: false
+      });
+    }
+
+    showSignup() {
+      this.setState({
+        showLogin: false,
+        showSignup: true
+      });
+    }
+
+
   render() {
-    return(
+    return (
       <div>
         <h1>Bagel Legend</h1>
         <Search />
-        <button type="button">Login</button>
+        <button type="button" onClick={this.showLogin}>Login</button>
+        <button type="button" onClick={this.showSignup}>Sign Up</button>
+
 
         { this.state.showLogin ? <Login /> : null }
 
-        <button type="button">Sign Up</button>
 
-        { this.state.showLogin ? <Signup /> : null }
+        { this.state.showSignup ? <Signup /> : null }
         <div>
           <h2>Top Bagels of All Time</h2>
         </div>
